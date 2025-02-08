@@ -28,4 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// 追加: ボタンページへのルート
+Route::get('/button-page', function () {
+    return view('button-page');
+})->name('button.page');
+
 require __DIR__.'/auth.php';
+
+Route::get('/button-page', function () {
+    return view('button-page');
+})->name('button.page');
+
