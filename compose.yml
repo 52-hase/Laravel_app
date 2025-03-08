@@ -7,6 +7,7 @@ services:  # 複数のサービス（コンテナ）を定義するセクショ�
 
   nginx:  # Nginx（Webサーバー）を実行するサービス
     image: nginx  # DockerHub から公式の Nginx イメージを利用
+    platform: linux/amd64  # Rosetta 2経由でx86_64イメージを実行
     container_name: nginx  # コンテナ名を "nginx" に指定
     ports:  # ポートのマッピングを設定
       - 8000:80  # ホストの8000番ポートをコンテナの80番ポートにマッピング
@@ -19,6 +20,7 @@ services:  # 複数のサービス（コンテナ）を定義するセクショ�
 
   db:  # データベース（MySQL）を実行するサービス
     image: mysql:5.7  # DockerHub から MySQL 5.7 のイメージを利用
+    platform: linux/amd64  # MySQL もARM64で問題がある可能性があるため
     container_name: db  # コンテナ名を "db" に指定
     environment:  # 環境変数を指定（MySQLの初期設定用）
       MYSQL_ROOT_PASSWORD: root  # MySQL の root ユーザーのパスワード
