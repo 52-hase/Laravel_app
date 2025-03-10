@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white/90 dark:bg-gray-800/90 overflow-hidden shadow-2xl rounded-2xl p-8 backdrop-blur-sm hover:scale-[1.02] transition-all">
                 <div class="p-6 text-gray-900 dark:text-gray-100 text-center text-2xl font-semibold">
-                    🎉 {{ __("You're logged in!") }} 🎉
+                    {{ __("スタート画面") }} 
                 </div>
             </div>
         </div>
@@ -18,9 +18,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="text-gray-900 dark:text-gray-100 text-center">
-                    <a href="{{ route('button.page') }}" 
+                    <a href="{{ route('button.page1') }}" 
                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all">
-                        ボタンページへ移動
+                        ボタン①ページへ移動
+                    </a>
+                    <a href="{{ route('button.page2') }}" 
+                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all">
+                        ボタン②ページへ移動
                     </a>
                 </div>
             </div>

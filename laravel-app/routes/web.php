@@ -29,13 +29,13 @@ Route::middleware('auth')->group(function () {
 });
 
 // 追加: ボタンページへのルート
-Route::get('/button-page', function () {
-    return view('button-page');
-})->name('button.page');
+Route::get('/button-page1', function () {
+    return view('button-page1');
+})->name('button.page1');
+
+
+Route::get('/button-page2', function () {
+    return view('button-page2');
+})->name('button.page2');
 
 require __DIR__.'/auth.php';
-
-Route::get('/button-page', function () {
-    return view('button-page');
-})->name('button.page');
-

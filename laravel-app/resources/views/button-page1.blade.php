@@ -6,8 +6,8 @@
     </x-slot>
 
     <div class="py-12 flex justify-center">
-        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded transition-all">
+        <a href="{{ route('dashboard') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded transition-all">
             押せるだけのボタン
-        </button>
+        </a>
     </div>
 </x-app-layout>
